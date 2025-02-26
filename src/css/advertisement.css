@@ -1,74 +1,80 @@
-/* Main container (Mobile version) */
+/* advertisement section */
 .advertisement {
-    display: block;
     width: 100%;
-    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 80px 0;
 }
 
 .advertisement-container {
-    min-width: 335px;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
 }
 
-
 .advertisement-text {
-    display: block;
     max-width: 335px;
+    color: #0c0808;
     font-family: "Inter Tight", sans-serif;
     font-weight: 600;
     font-size: 48px;
     line-height: 1.08333;
     letter-spacing: -0.01em;
     text-transform: uppercase;
-    color: #0c0808;
-    text-align: left;
+    display: inline-block;
 }
 
 .advertisement-highlight {
-    display: inline-block;
     background: #576f35;
     color: #FFF;
     border-radius: 12px;
+    display: inline-block;
+    padding: 2px 7px;
+    position: relative;
+    left: -9px;
 }
 
-/* Tablet version */
-@media (min-width: 768px) {
+/* TABLET */
+@media screen and (min-width: 768px) {
+    .advertisement {
+        padding: 100px 0;
+    }
+
     .advertisement-container {
         min-width: 704px;
+        padding-left: 0;
     }
 
     .advertisement-text {
         font-size: 64px;
-        line-height: 1;
-        max-width: 675px;
+        max-width: 702px;
     }
 
     .advertisement-highlight {
-        font-size: 64px;
-        padding-right: 7px;
+        padding: 8px 10px;
+        left: -12px;
     }
 }
 
-/* Desktop version */
-@media (min-width: 1280px) {
-    .advertisement {
-        max-width: 1280px;
+/* DESKTOP */
+@media screen and (min-width: 1280px) {
+    .advertisement-container {
         min-height: 228px;
         padding: 0;
     }
-    .advertisement-container {
-        padding-top: 100px;
-        padding-bottom: 100px;
 
-    }
     .advertisement-text {
         font-size: 76px;
         max-width: 1044px;
     }
 
     .advertisement-highlight {
-        font-size: 76px;
-
+        padding: 8px 10px;
+        left: -13px;
     }
 }
